@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text-skyblue {
+            color: skyblue;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container" >
+        <fieldset>
+         <legend>報表</legend>
+         <div class="container">
+            <h3 class="text-skyblue">
+                姓名
+            </h3>
+            <p>
+                <input type="text" value="蔡佩君" name="mytext">
+            </p>
+            <p>
+                <input type="submit" value="提交">
+                <input type="reset" value="清除">
+            </p>
+        </div>
+
+        <div class="container">
+            <h3 class="text-skyblue">
+                手機號碼:
+            </h3>
+            <p>
+                <input type="tel" name="usertel"
+                pattern="[0-9]{4}-[0-9]{6} " 
+                piaceholder="例如0912-345678"
+                title="例如0912-345678">
+                <input type="submit">
+            </p>
+            
+        </div>
+
+        <div class="container">
+            <h3 class="text-skyblue">
+                地址
+            </h3>
+            <p>
+                <input type="text" name="mynumber" value="新北市泰山">
+            </p>
+            <p>
+                <input type="submit" value="提交">
+                <input type="submit" value="清除">
+            </p>
+        </div>
+
+        <div class="container">
+            <h3 class="text-skyblue">
+                選擇年齡
+            </h3>
+            <p>
+                <select name="mySelect" id="">
+                    <option value="">請選擇</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="25">25</option>
+                    <option value="30">30</option>
+                </select>
+            </p>
+        </div>
+
+        <div class="container">
+            <h3 class="text-skyblue">
+                單選3C產品
+            </h3>
+            <p>
+                <input type="radio" name="myradio" id="手機">
+                <label for="手機">手機</label>
+                <input type="radio" name="myradio" id="筆電">
+                <label for="筆電">筆電</label>
+                <input type="radio" name="myradio" id="桌機">
+                <label for="桌機">桌機</label>                   
+            </p>
+        </div>
+
+        <div class="container">
+            <h3 class="text-skyblue">
+                程式語言選擇
+            </h3>
+            <input type="checkbox" name="mycheckbox[]" id="check1">
+            <label for="check1">html</label>
+            <input type="checkbox" name="mycheckbox[]" id="check2">
+            <label for="check2">css</label>
+            <input type="checkbox" name="mycheckbox[]" id="check3">
+            <label for="check3">php</label>
+        </div>
+
+           
+        <h3>
+       留言板
+        </h3>
+        <textarea name="mytextarea" id="" cols="80" rows="10" >
+姓名:hi
+電話:0912-345678
+    </textarea>
+    </div>
+
+         <!-- <p>電話</p> -->
+         <!-- <p>地址</p> -->
+         <!-- <p>下拉選單</p> -->
+         <!-- <p>單選</p> -->
+         <!-- <p>多選</p> -->
+         <!-- <p>備註</p> -->
+         <!-- <p>reset</p> -->
+        <!-- <p>submit</p> -->
+
+        </fieldset>
+    </div>
+    
+</body>
+</html>
