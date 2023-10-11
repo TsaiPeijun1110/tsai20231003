@@ -24,10 +24,72 @@
             background-repeat: no-repeat;
             
         }
+        table,
+        tr,
+        td {
+            border: 1px solid black;
+            opacity: 1;
+            
+        }
+        table{
+            width: 80%;
+            height: 80vh;
+            margin: auto;
+        }
+        td{
+            width: 33%;
+            height: 50%;
+        }
+
+        .my-img{
+            test-align:center;
+
+        }
+
+        img{
+            width: 120px;
+            height: 150px;
+            opacity: 0,5;           
+        }
+        iframe{
+            width: 80%;
+            height: 50%;
+        }
     </style>
 </head>
 <body>
     <div class="container box1">
+        <table>
+            <tr>
+                <td>
+                    <img src="./images/01.png" alt="srcset">
+                </td>
+                <td>
+                    <img src="./images/01.png" alt="srcset">
+                </td>
+                <td>
+                    <img src="./images/01.png" alt="srcset">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="./images/01.png" alt="srcset">
+                    
+                </td>
+                <td>
+                    <div class="my-iframe">
+                        "<iframe width="560" height="315" src="https://www.youtube.com/embed/Zy9XE7mmpKk?si=_vHbqEXoDCHFy0Uw" 
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen></iframe>" frameborder="0"></iframe>
+                </div>   
+            
+                </td>
+                <td>
+                    <img src="./images/01.png" alt="srcset">
+                </td>
+            </tr>
+
+        </table>
 
     </div>
     <div class="container box2">
