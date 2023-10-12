@@ -44,6 +44,14 @@
         .divA>div {
             color: blueviolet;
         }
+        /* 只會影響next兄弟姊妹 一個 */
+        .silbling+p{
+            color: bisque;
+        }
+        /* 只會影響next兄弟姊妹 全部 */
+        silbling~p{
+            color: bisque;
+        }
     </style>
 </head>
 <body>
@@ -112,7 +120,7 @@
     </div>
 
     <br>
-    <br><br>
+    <hr><br>
     <h3>空格 如果可以少用</h3>
     <div class="diva">
         diva
@@ -136,5 +144,27 @@
             </p>
         </div>
     </div>
+    </div>
+
+    <br><hr><br>
+    <h3>+兄弟</h3>
+    <p>
+        Lorem ipsum dolor sit amet consectetur.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur.
+    </p>
+    <div class="silbling">
+        <p>&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur.</p>
+        <p>&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur.</p>
+        <p>&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur.</p>
+        <p>&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur.</p>    
+    </div>
+    <p>
+        Lorem ipsum dolor sit amet.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet.
+    </p>
 </body>
 </html>
