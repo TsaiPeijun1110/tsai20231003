@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        .nav{
+            width: 100%;
+        }     
+        .nav>a{
+            margin-left: 20px;
+            text-decoration: none;
+            color: thistle;
+            font-size: 20px;
+            background-color: violet;
+            border-radius: 10px;
+        }
+        .nav>a:hover{
+            color: blueviolet;
+            font-size: 22px;
+            border-radius: 20px;
+            background-color: floralwhite;
+            transition-duration: 0.5s;
+        }
+        .container{
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        .box{
+            
+            margin-left: 30px;
+            width: 50px;
+            height: 10vh;
+            background-image: url('https://picsum.photos/seed/picsum/400/300');
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 30px;            
+        }
+        .box:hover{
+            margin-left: 30px;
+            width: 55px;
+            height: 15vh;
+            background-image: url('https://picsum.photos/400/300?grayscale');
+            transition-duration: 1s;
+            border-radius: 10px;
+        }
+        input:focus{
+            background-color: thistle;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="nav">
+        <a href="">home</a>
+        <a href="">apple</a>
+        <a href="">name</a>
+    </div>
+
+
+    <div class="container">
+        <a href="https://picsum.photos/200/300/?blur">
+            <div class="box"></div>
+        </a>
+        
+        <a href="https://picsum.photos/400/300/?blur=2">
+            <div class="box"></div>
+        </a>
+       
+        <a href="https://picsum.photos/200/300.webp">
+            <div class="box"></div>
+        </a>
+    </div>
+    <div class="container">
+        <form action="">
+            <p>
+                <label for="">name</label>
+                <input type="text" name="" id="">
+            </p>
+            <p>
+                <label for="">mobile</label>
+                <input type="text" name="" id="">
+            </p>
+        </form>
+    </div>
+</body>
+</html>
