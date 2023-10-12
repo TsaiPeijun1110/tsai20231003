@@ -32,6 +32,18 @@
         .box1 > div >p{
             color: tomato;
         }
+        .diva>div{
+            color: mediumvioletred;
+        }
+        /* 空格 全部被影響 */
+        .divA div {
+            color: khaki;
+        }
+
+        /* > 只會影響同一層 */
+        .divA>div {
+            color: blueviolet;
+        }
     </style>
 </head>
 <body>
@@ -99,5 +111,30 @@
          </div>
     </div>
 
+    <br>
+    <br><br>
+    <h3>空格 如果可以少用</h3>
+    <div class="diva">
+        diva
+        <div class="diva1">
+            &nbsp;&nbsp;diva1
+        <div class="diva11">
+            &nbsp;&nbsp;&nbsp;diva11
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet.
+            </p>
+        </div>
+    </div>
+
+    diva
+        <div class="diva1">
+            &nbsp;&nbsp;diva1
+        <div class="diva11">
+            &nbsp;&nbsp;&nbsp;diva11
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet.
+            </p>
+        </div>
+    </div>
 </body>
 </html>
