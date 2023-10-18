@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>老師</title>
+    <style>
+        .container{
+            width: 80%;           
+            margin: auto;
+            margin-top: 30px;
+        }
+        table,
+        tr,
+        th,
+        td{
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        table{
+            width: 100%;
+        }
+        td{
+            height: 30px;
+            
+        }
+        .bg-thistle{
+            background-color: thistle;
+        }
+        .bg-honeydew{
+            background-color: honeydew;
+        }
+        tr:nth-child(odd){
+            color: indianred;
+        }
+        tr:nth-child(1){
+            color: thistle;
+        }
+        .text-right{
+            text-align: right;
+        }
+        .text-right > a{
+            text-decoration: none;
+        }
+        .text-green > a{
+            color: violet;
+            text-decoration: none;
+        }
+        nav{
+            width: 50px;
+            height: 50vh;
+        }
+    </style>
+</head>
+<div class="nav">
+    <a href="./s20231018.01.html">student</a>
+    <a href="./teacher.html">teacher</a>
+</div>
+<body>
+    <div id="student"></div>
+    <div id="teacher"></div>
+    <div class="container text-right">
+        <h3>teacher老師</h3>
+        <a href="./s1018.02.html">新增&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a href="./s20231018.01.html">學生</a>
+        <a href="./teacher.html">老師</a>
+        <table>
+            <tr class="bg-honeydew">
+                <th>id</th>
+                <th>name</th>
+                <th>mail</th>
+                <th>Telephone</th>
+                <th>Delect</th>
+            </tr>
+            <tr class="bg-thistle">
+                <td>1</td>
+                <td><a href="./etit.01.html">Della</a></td>
+                <td>tl@gmail.com</td>
+                <td>0911-111-111</td>
+                
+                <td class="text-green">
+                    <a href="./etis.html">修改</a>
+                    <a href="./del.03.html">刪除</a>
+                </td>
+            </tr>
+            <tr >
+                <td>2</td>
+                <td><a href="./etit.01.html">Dolly</a></td>
+                <td>tl@gmail.com</td>
+                <td>0922-222-111</td>
+               
+                
+                <td class="text-green">
+                    <a href="./etis.html?id2">修改</a>
+                    <a href="./del.03.html">刪除</a>
+                </td>
+            </tr>
+            
+            <tr class="bg-thistle">
+                <td>1</td>
+                <td><a href="./etit.01.html">Della</a></td>
+                <td>tl@gmail.com</td>
+                <td>0911-111-111</td>
+                
+                <td class="text-green">
+                    <a href="./etis.html">修改</a>
+                    <a href="./del.03.html">刪除</a>
+                </td>
+            </tr>
+            <tr >
+                <td>2</td>
+                <td><a href="./etit.01.html">Dolly</a></td>
+                <td>tl@gmail.com</td>
+                <td>0922-222-111</td>
+               
+                
+                <td class="text-green">
+                    <a href="./etis.html?id2">修改</a>
+                    <a href="./del.03.html">刪除</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
