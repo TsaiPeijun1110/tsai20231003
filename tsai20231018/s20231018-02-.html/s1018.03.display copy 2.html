@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            width: 50%;
+            height: 50px;
+            background-color: lightblue;
+        }
+
+        .display-block {
+            display: block;
+            background-color: thistle;
+        }
+
+        a {
+            width: 50px;
+            height: 50px;
+            background-color: lightcoral;
+        }
+        .display-inline{
+            display: inline;
+            background-color: thistle;
+        }
+        table,
+        tr,
+        th,
+        td {
+            border: 1px solid salmon;
+            border-collapse: collapse;            
+        }
+        .container{
+            width: 100%;
+        }
+        table {
+            width: 100%;
+            text-align: center;
+        }
+        td,
+        th{
+            width: 25%;
+            height: 10vh;
+        }        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3>black</h3>
+        <h4>可以換行</h4>
+        <h4>可以調整大小</h4>
+
+        <span>111</span>
+        <span>222</span>
+        <span class="display-block">333</span>
+
+        <a href="aaa"></a>
+        <a href="display-block">bbb</a>
+        <a href="">ccc</a>
+    </div>
+    <div class="comtainer">
+        <table>
+            <tr>
+                <th>type</th>
+                <th>大小 換行</th>
+                <th>範例</th>
+                <th>常見代表</th>
+            </tr>
+            <tr>                      
+                <th>                   
+                    block
+                </th>
+                <td>
+                    可大小 可換行
+                </td>
+                <td>
+                    <h3>old</h3>
+                    <p>
+                        Lorem ipsum dolor amet consectetur.
+                    </p>
+                    <h4>new</h4>
+                    <p>
+                        Lorem ipsum dolor <span class="display-block"> sit</span>,amet consectetur.
+                    </p>
+                </td>
+                <td>
+                <p>
+                    div , h1 - h6 ,  p , form , header , footer .....
+                </p>
+            </td>
+            </tr>
+            <tr>
+                <th>
+                    inline-block
+                </th>
+                <td>
+                    可大小 可換行
+                </td>
+                <td>
+                    <h3>old</h3>
+                    <p>
+                        Lorem ipsum <div>dolor</div>, sit amet consectetur
+                    </p>
+                    <h4>new</h4>
+                    <p>
+                        Lorem ipsum <span class="display-block">dolor</span>,,sit amet consectetur.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    inline
+                </th>               
+                <td>
+                    不可大小 可換行
+                </td>
+                <td>
+                    <h3>old</h3>
+                    <div>
+                        Lorem ipsum <div>dolor</div>  sit amet consectetur.
+                    </div>
+                    <h4>new</h4>
+                    <p>
+                        Lorem ipsum <div class="display-inline">dolor</div>,sit amet consectetur.
+                    </p>
+                </td>
+                <td>
+                <p>
+                    span , a , img
+                </p>  
+            </td>             
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
