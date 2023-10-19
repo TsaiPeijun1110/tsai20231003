@@ -1,35 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .pos-static{
+        body {
+            height: 2000px;
+            font-size: 28px;
+        }
+
+        .pos-static {
             left: 30px;
         }
-        .pox-relative{
-            left: 30px;
+
+        .pox-relative {            
             position: relative;
+            left: 30px;
+        }
+
+        .pox-fixed {
+            position: fixed;
+            right: 100px;
+            bottom: 30px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        h3 {
+            display: none;
+        }
+
+        .nav-fixed {
+            position: fixed;
+            top: 0;
+
+            width: 100%;
+            height: 15vh;
+            background-color: lightcoral;
+            z-index: 100;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 15vh;
+            background-color: pink;
+            z-index: 100;
+        }
+
+        .pos-absolute {
+            position: absolute;
+        }
+        .box-relative{
+            position: relative;
+            width: 800px;
+            height: 800px;
+            background-color: salmon;
+        }
+        .box-absolute{
+            width: 100px;
+            height: 100px;
+        }
+        .box1 {
+            background-color: lightblue;
+            position: absolute;
+        }
+
+        .box2 {
+            background-color: palegoldenrod;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .box3 {
+            background-color: slateblue;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+        .box4 {
+            background-color: lightblue;
+            position: absolute;
+            right: 0;
+            bottom: 0;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
+        <nav class="nav-fixed">
+
+        </nav>
         <h3>position</h3>
         <br>
-        <hr><hr>
+        <hr><br>
         <h4>static</h4>
         <p class="pos-static">
             Lorem ipsum dolor sit amet.
         </p>
         <br>
-        <hr><hr>
+        <hr><br>
+        <h4>relative</h4>
         <p class="pos-relative">
             Lorem ipsum dolor sit amet.
         </p>
+
         <br>
-        <hr><hr>
+        <hr><br>
+        <h4>absolute</h4>
+        <div class="box-relative">
+            <div class="box-absolute box1">
+
+            </div>
+            <div class="box-absolute box2">
+
+            </div>
+            <div class="box-absolute box3">
+
+            </div>
+            <div class="box-absolute box4">
+
+            </div>
+        </div>
+        <br>
+        <hr><br>
+        <h4>fixed</h4>
+        <a href="#" class="pos-fixed">top</a>
+
+        <footer class="footer">
+            I am Footer
+        </footer>
+
+
     </div>
 </body>
+
 </html>
