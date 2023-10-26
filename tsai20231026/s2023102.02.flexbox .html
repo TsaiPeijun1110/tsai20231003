@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            /* 宣告flexbox */
+            /* 橫row(default) 直column */
+            display: flex;
+            /* 橫row 置中 */
+            justify-content: space-around;
+            /* 直colum 置中 */
+            align-items: baseline;
+            margin: auto;
+            width: 100%;
+            height: 60vh;
+            background-color: rosybrown;
+            font-size: 26px;
+            color: indigo;
+            
+        }
+        .item{
+            
+            width: 125px;
+            height: 130px;
+            background-color: thistle;
+            font-size: 25px;
+            margin: 10px;
+        }
+        .flex{
+           width: 100%;
+           height: 60px;
+           background-color: lightpink;
+           font-size: 25px;
+           content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex">
+        html
+    </div>
+    <div class="container">      
+        <div class="item">           
+            程式語言
+        </div>
+        <div class="item">
+            HTML語法
+        </div>
+        <div class="item">        
+            CSS語法
+        </div>
+        <div class="item">           
+            JS語法
+        </div> 
+        <div class="item">           
+            CSS語法
+        </div>
+        <br>        
+        <div class="item">           
+            HTML語法
+        </div>      
+    </div>
+    <div class="flex">
+        html
+    </div>
+</body>
+</html>
