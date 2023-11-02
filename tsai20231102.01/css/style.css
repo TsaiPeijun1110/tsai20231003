@@ -1,0 +1,24 @@
+.main{
+    width: 1024px;
+    height: 65px;
+    background-color: bisque;
+    border: 1px solid black;
+    box-sizing: 0;
+}
+.menu{
+    width: 654px;
+    height: 215px;
+    background-color: cornflowerblue;
+}
+.container{
+    width: 770px;
+    height: 654px;
+    background-color: lightcoral;
+    border: 1px solid black;
+}
+.footer{
+    width: 770px;
+    height: 20px;
+    background-color: lightcoral;
+    border: 1px solid black;
+}
