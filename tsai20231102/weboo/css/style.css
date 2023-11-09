@@ -8,7 +8,9 @@
     width: 1024px;
     height: 768px;
     margin: auto;
+    background-color: #0000ff;
 }
+
 .header{
     width: 1024px;
     height: 65px;
@@ -25,10 +27,11 @@
     flex-wrap: wrap;
     width: 1024px;
     margin: auto;
+    height: 768px;
 }
 .aside{
     width: 215px;
-    height: calc(768px- 65px- 20px);
+    height: calc(1768px- 65px- 20px);
     /* background-color: lightpink; */
     border: 1px solid black;
     border-right: 0;
@@ -108,4 +111,9 @@ iframe{
     /* background-color: lightpink; */
     margin: auto;
     border: 1px solid black;
+
+    font-family: "標楷體";
+    color: #000000;
+    text-align: center;
+    font-size: 16px;
 }
