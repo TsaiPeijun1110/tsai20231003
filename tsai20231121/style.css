@@ -60,7 +60,7 @@
     text-align: center;
     color: #FF00FF ;
     margin-bottom: 20px; /*加底線*/
-    border: 1px solid black; /*底線粗度及顏色*/
+    border-bottom: 2px solid black; /*底線粗度及顏色*/
     background-color: brown;
 }
 /*設定全部社的背景*/
@@ -113,7 +113,7 @@
 }
 
 .main-footer{
-    height: calc(100%-29px);
+    height: calc(100% - 29px);
 }
 
 .iframe{
@@ -128,4 +128,8 @@
     margin: auto;
     border: 1px solid black;
    
+    font-family: '標楷體';
+    font-size: 16px;
+    color: #000000;
+    text-align: center;
 }
