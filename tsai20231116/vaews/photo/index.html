@@ -40,6 +40,9 @@
             display: flex;
             height: 236px;
         }
+        .breadcrumb-item{
+            height: 10px;
+        }
     </style>
 </head>
 
@@ -62,6 +65,14 @@
                         <a class="nav-link" href="#">Features</a>
                     </li>
                 </ul>
+                <nav aria-label="breadcrumb" >
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item"><a href="#">Photos</a></li>
+                      <li class="breadcrumb-item"><a href="#">img_url</a></li>
+                      <li class="breadcrumb-item active" aria-current="page"><a href="#">Products</a></li>
+                    </ol>
+                  </nav>
             </div>
         </div>
     </nav>
