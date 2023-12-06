@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 400px;
+            height: 300px;
+            transform: 30s;  /* 在1秒内应用transform变换效果 */
+        }
+        .box:hover{
+             /* width: 600px; 鼠標移過去時放大600px */
+
+             transform: scaleX(1.2);  /*元素将在水平方向上以1.2倍的比例进行缩放 */
+        }
+        .bg-blue{
+            background-color: lightblue;
+            transform: rotate(20deg);  /* 对元素进行顺时针旋转20度 */
+        }
+        .bg-pink{
+            background-color: lightpink;
+            transform: rotate(20deg);  /* 对元素进行顺时针旋转20度 */
+        } 
+        div>img{
+            width: 100%;
+            height: 100%;
+        }
+        .container{
+            display: flex;
+            justify-content: space-around;
+            height: 70vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+    <div class="container">
+        <div class="box bg-blue">
+            <img src="https://picsum.photos/id/13/200/300" alt="">
+        </div>
+        <div class="box bg-pink">
+            <img src="https://picsum.photos/id/14/200/300" alt="">
+        </div>
+    </div>
+    <div class="container"></div>
+</body>
+</html>
