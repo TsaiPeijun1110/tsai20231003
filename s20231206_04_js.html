@@ -35,32 +35,40 @@
 <!--body上面-->
 <script>
     //綁定
-    let btnPrimary = document.getElementById('btnPrimary');
-    let btnSuccess = document.getElementById('btnSuccess');
-    let btnDanger = document.getElementById('btnDanger');
-    let btnWarning = document.getElementById('btnWarning');
-    let myBox = document.getElementById('myBox');
+   // 獲取按鈕元素
+let btnPrimary = document.getElementById('btnPrimary');  // 以ID為btnPrimary的按鈕
+let btnSuccess = document.getElementById('btnSuccess');  // 以ID為btnSuccess的按鈕
+let btnDanger = document.getElementById('btnDanger');    // 以ID為btnDanger的按鈕
+let btnWarning = document.getElementById('btnWarning');  // 以ID為btnWarning的按鈕
+
+// 獲取要修改的元素
+let myBox = document.getElementById('myBox');  // 以ID為myBox的元素
+
     
-    //動作
-    btnPrimary.addEventListener('click', function (){
-        console.log('btnPrimary ok');
-        myBox.setAttribute('class',"box bg-primary w-100");
-    });
+    // 為按鈕元素添加點擊事件監聽器
+btnPrimary.addEventListener('click', function (){
+    console.log('btnPrimary ok');  // 在控制台輸出訊息，用於檢查按鈕是否正常被點擊
+    myBox.setAttribute('class',"box bg-primary w-100");  // 將myBox的class屬性設置為指定的值，改變樣式
+});
 
-    btnSuccess.addEventListener('click', function (){
-        console.log('btnSuccess ok');
-        myBox.setAttribute('class',"box bg-success w-100");
-    });
+// 為按鈕元素添加點擊事件監聽器
+btnSuccess.addEventListener('click', function (){
+    console.log('btnSuccess ok');  // 在控制台輸出訊息，用於檢查按鈕是否正常被點擊
+    myBox.setAttribute('class',"box bg-success w-100");  // 將myBox的class屬性設置為指定的值，改變樣式
+});
 
-    btnDanger.addEventListener('click', function (){
-        console.log('btnDanger ok');
-        myBox.setAttribute('class',"box bg-danger w-100");
-    });
+// 為按鈕元素添加點擊事件監聽器
+btnDanger.addEventListener('click', function (){
+    console.log('btnDanger ok');  // 在控制台輸出訊息，用於檢查按鈕是否正常被點擊
+    myBox.setAttribute('class',"box bg-danger w-100");  // 將myBox的class屬性設置為指定的值，改變樣式
+});
 
-    btnWarning.addEventListener('click', function (){
-        console.log('btnWarning ok');
-        myBox.setAttribute('class',"box bg-warning w-100");
-    });
+// 為按鈕元素添加點擊事件監聽器
+btnWarning.addEventListener('click', function (){
+    console.log('btnWarning ok');  // 在控制台輸出訊息，用於檢查按鈕是否正常被點擊
+    myBox.setAttribute('class',"box bg-warning w-100");  // 將myBox的class屬性設置為指定的值，改變樣式
+});
+
 </script>
 
 </body>
