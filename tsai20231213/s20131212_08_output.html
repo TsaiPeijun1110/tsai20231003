@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <!-- output -->
+
+        <!-- 顯示Lorem ipsum dolor sit amet在網頁上 -->
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="myDiv">
+                        Lorem ipsum dolor sit amet.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // 使用innerHTML把Lorem ipsum dolor sit amet.更換為55688
+            let myDiv = document.getElementById('mtDiv');
+            myDiv.innerHTML = "55688";
+
+
+            // 第二個:document.write(),少用 後面元素會被影響
+            // 因為載入 HTML 文件後使用 document.write() 將刪除所有現有的 HTML：
+            //document.write() 方法只能用於測試
+            document.write('Hello');
+
+
+            // 第三個:window.alert()
+            alert('Heiil');
+
+            // 第四個:console.log()
+            console.log();
+        </script>
+
+        
+    </body>
