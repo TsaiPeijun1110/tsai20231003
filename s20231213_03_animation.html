@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <style>
+    .container{
+        overflow: hidden;  /*超出的範圍設定隱藏*/
+        position: relative;
+        margin-top: 10px;
+        width: 1000%;
+        height: 700px;
+        background-color: lightpink;
+        
+    }
+    .box {
+        left: 0px;
+        position: absolute;
+        width: 250px;
+        height: 350px;
+        /* background-color: lightcoral; */
+        animation-name: example;
+        animation-duration: 10s;
+        background-image: url(https://memeprod.ap-south-1.linodeobjects.com/user-gif/f9852ed154cdf33e25bfcf673d698885.gif);
+    }
+    
+    @keyframes example {
+        0% {
+            /* background-image: url(https://memeprod.ap-south-1.linodeobjects.com/user-gif-thumbnail/f1b9f30283df65c2f27ae34eb103d836.gif); */
+            /* background-color: lightblue; */
+            left: 0px;
+            top: 0px;
+        }
+        20% {
+            background-image: url(https://memeprod.ap-south-1.linodeobjects.com/user-gif-thumbnail/a583c2f342208b54bc09208e0bba7f49.gif);
+            /* background-color: lightslategrey; */
+            left: 200px;
+            top: 0px;
+        }
+        40% {
+            background-image: url(https://memeprod.ap-south-1.linodeobjects.com/user-gif-thumbnail/86de7e645066d80035f4b8b347b7561c.gif);
+            /* background-color: lightsalmon; */
+            left: 400px;
+            top: 0px;
+        }
+        65% {
+            background-image: url(https://memeprod.ap-south-1.linodeobjects.com/user-gif-thumbnail/32b76930e0d3c83ec616e33389f8562a.gif);
+            /* background-color: lightseagreen; */
+            left: 600px;
+            top: 0px;
+        }
+        75% {
+            background-image: url(https://memeprod.ap-south-1.linodeobjects.com/user-gif-thumbnail/88f5dc93961e92ad0f115452b06b3dac.gif);
+            /* background-color: lightgoldenrodyellow; */
+            left: 800px;
+            top: 0px;
+        }
+        85% {
+            background-image: url(https://memeprod.ap-south-1.linodeobjects.com/user-gif/f9852ed154cdf33e25bfcf673d698885.gif);
+            /* background-color: lightgreen; */
+            left: 800px;
+            top: 0px;
+        }
+        100% {
+            background-image: url(https://memeprod.ap-south-1.linodeobjects.com/user-gif/f9852ed154cdf33e25bfcf673d698885.gif);
+            /* background-color: lightgoldenrodyellow; */
+            left: 1330px;
+            top: 0px;
+        }
+    }
+</style>
+    <body>      
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col">
+                    <div class="box">                       
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </body>
