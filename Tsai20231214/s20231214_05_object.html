@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+    <table>
+        <tr>
+            <td>keyID</td>
+            <td>valueID</td>
+        </tr>
+        <tr>
+            <td id="keyID"></td>
+            <td id="valueID"></td>
+        </tr>
+    </table>
+
+    <script>
+        let obj = {
+            'name': ':蔡佩君',
+            'phone': ':0912345678',
+            'Residential.Address': ':243新北市泰山區貴子里致遠新村55之1號',
+            
+        };
+        const keyID = document.getElementById('keyID');
+        const valueID = document.getElementById('valueID');
+
+        console.log('obj', obj);
+        console.log('obj["name"]', obj['name']);
+        console.log('obj.name', obj.name);
+        console.log('obj typeof', typeof (obj));
+        keyID.innerHTML = 'name';
+        valueID.innerHTML = obj.name;
+
+        console.log('obj["phone"]', obj['phone']);
+        console.log('obj.phone', obj.phone);
+        console.log('obj typeof', typeof (obj));
+        keyID.innerHTML = 'phone';
+        valueID.innerHTML = obj.phone;
+        
+        console.log('obj["Residential.Address"]', obj['Residential Address']);
+        console.log('obj.Residential.Address', obj.Residential.Address);
+        console.log('obj typeof', typeof (obj));
+        keyID.innerHTML = 'Residential Address';
+        valueID.innerHTML = obj.Residential.Address;
+    </script>
+</body>
+
+</html>

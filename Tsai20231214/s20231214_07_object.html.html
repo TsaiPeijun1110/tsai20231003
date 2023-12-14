@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Dynamic Table with JavaScript</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%; /* 可以根據需要調整表格寬度 */
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table id="myTable">
+        <tr>
+            <th>項目</th>
+            <th>資訊</th>
+        </tr>
+    </table>
+
+    <script>
+        let obj = {
+            '姓名': '蔡佩君',
+            '年齡': '18',
+            '星座': '摩羯座',
+            '手機號碼:': '0912345678',
+            'School': '大學生',
+            'email': 'abcd123@gmail.com',
+            '程式語言': 'html,css,php,js',
+            '地址': '243新北市泰山區貴子里致遠新村55之1號',
+        };
+
+        const table = document.getElementById('myTable');
+
+        for (const key in obj) {
+            if (obj.hasOwnProperty(key)) {
+                const row = table.insertRow();
+                const cell1 = row.insertCell(0);
+                const cell2 = row.insertCell(1);
+
+                cell1.innerHTML = key;
+                cell2.innerHTML = obj[key];
+            }
+        }
+    </script>
+
+</body>
+
+</html>
