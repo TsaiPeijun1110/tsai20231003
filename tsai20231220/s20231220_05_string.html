@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+<span id="mySpan"></span>
+
+  <script>
+    let text = "泰山職訓局 明志科技大學";
+    //slice(放起始位置的值,放終點位置的值)沒放起始值的話都以0開始
+    //slice(start),(end)
+    let newText = text.slice(3,10);
+    console.log('newText',newText);
+
+
+    //substr(起始位置,長度)
+    //slice(start),(length)
+    let newname = text.substr(3,10);
+    console.log('newname',newname);
+
+
+    //substring(起始位置,長度),(start),(length)
+    let substringText = text.substr(3,10);
+    console.log('substringText',substringText);
+
+
+    //trim清除前後空白
+    let noTrimText = "   泰山職訓局    ";
+
+    let trimText = noTrimText.trim();
+    mySpan.innerText = noTrimText;
+
+    console.log('noTrimText',noTrimText);
+    console.log('noTrimText.length',noTrimText.length);
+    console.log('trimText',trimText);
+    console.log('trimText.length',trimText.length);
+
+    //string to array
+    let textString = "amy.bob.cat";
+    let textArr = textString.split(',');
+    console.log('textString',textString);
+    console.log('textArr',textArr);
+
+    //array to string
+    let arrayToString = textArr.toString();
+    console.log('arrayToString',arrayToString);
+  </script>
+</body>
+
+</html>
