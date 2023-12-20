@@ -31,7 +31,7 @@
         </div>
         <div class="row mt-3">
             <div class="col">
-                <span id="myspan">resuit...</span>
+                <span id="myspan"></span>
             </div>
         </div>
     </div>
@@ -47,14 +47,17 @@
             },
             subFun: function () {
                 let result = this.num1 - this.num2;
+                return result;
                 console.log(`num1 - num2 = ${result}`);
             },
-            mulFun: function () {
+            multiFun: function () {
                 let result = this.num1 * this.num2;
+                return result;
                 console.log(`num1 * num2 = ${result}`);
             },
             divFun: function () {
                 let result = this.num1 / this.num2;
+                return result;
                 console.log(`num1 / num2 = ${result}`);
             }
         };
@@ -68,7 +71,21 @@
             let num2Value =Number(num2.value) ;
             calobj.num1 = num1Value;
             calobj.num2 = num2Value;
-            myspan.innerText = calobj.sumFun();
+
+            let getSum = calobj.sumFun();
+            let getSub = calobj.subFun();
+            let getMulti = calobj.multiFun();
+            let getDiv = calobj.sumFun();
+
+            myspan.innerHTML = 
+            `
+            ${num1Value} + ${num2Value} = ${getSum} <br>
+            ${num1Value} - ${num2Value} = ${getSub } <br>
+            ${num1Value} / ${num2Value} = ${getMulti} <br>
+            ${num1Value} * ${num2Value} = ${getDiv} <br>
+            `;
+
+            // calobj.sumFun();
             // let result =  num1Value + num2Value;
             // console.log('result',result);
         })
