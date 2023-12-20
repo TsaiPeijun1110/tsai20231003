@@ -77,12 +77,28 @@
     // 2.動作
     myBtn.addEventListener('click', function () {
 
+        let text = "";
+        if(confirm('是否要計算?') == true) {
+            text = "You pressed ok";
+            console.log('text',text);
+        }else{
+            text = "You canceled!";
+            console.log('text',text);
+            return false;
+        }
+
       let myOptValue = myOpt.value;
       let nameValue = name.value;
 
       console.log('myOptValue', myOptValue);
 
       obj.name = nameValue;
+
+      if (myOptValue.length <=0) {
+        console.log('myOptValue.length' , myOptValue.length);
+        alert('請選擇 心情');
+        return false;
+      }
 
 
       let getResult = "";
