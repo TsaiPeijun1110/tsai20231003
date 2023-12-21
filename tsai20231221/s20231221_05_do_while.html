@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+
+
+    <script>
+        // 初始化计数器 k 为 1
+        let k = 1;
+
+        // 初始化总和为 0
+        let sum = 0;
+
+        // 使用 do-while 循环，先执行一次循环体，然后检查循环条件
+        do {
+            // 输出当前的计数器值 k
+            console.log('k', k);
+
+            // 将当前的计数器值 k 加到总和中
+            sum += k;
+
+            // 输出当前的总和值 sum
+            console.log('sum', sum);
+
+            // 增加计数器 k 的值，准备下一次循环
+            k++;
+
+            // 当计数器 k 小于等于 -1 时继续循环，否则结束循环
+        } while (k <= -1);
+
+    </script>
+</body>
+
+</html>
