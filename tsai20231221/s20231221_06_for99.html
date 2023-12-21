@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        #box{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <h3 class="text-center mt-5">Js For 99</h3>
+    <div class="row mt-5">
+        <div class="col">
+            <div id="box" class="text-center pt-3 pb-3">
+                    1 * 1 = 1 1 * 2 = 2 1 * 3 = 3 1 * 4 = 4 1 * 5 = 5 1 * 6 = 6 1 * 7 = 7 1 * 8 = 8 1 * 9 = 9 <br>
+                    1 * 1 = 1 1 * 2 = 2 1 * 3 = 3 1 * 4 = 4 1 * 5 = 5 1 * 6 = 6 1 * 7 = 7 1 * 8 = 8 1 * 9 = 9 <br>
+                    1 * 1 = 1 1 * 2 = 2 1 * 3 = 3 1 * 4 = 4 1 * 5 = 5 1 * 6 = 6 1 * 7 = 7 1 * 8 = 8 1 * 9 = 9 <br>
+                    1 * 1 = 1 1 * 2 = 2 1 * 3 = 3 1 * 4 = 4 1 * 5 = 5 1 * 6 = 6 1 * 7 = 7 1 * 8 = 8 1 * 9 = 9 <br>
+                    1 * 1 = 1 1 * 2 = 2 1 * 3 = 3 1 * 4 = 4 1 * 5 = 5 1 * 6 = 6 1 * 7 = 7 1 * 8 = 8 1 * 9 = 9 <br>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // 获取显示结果的容器
+    let box = document.getElementById('box');
+
+    // 初始化存放结果的变量
+    let resultText = '';
+
+    // 外层循环，控制乘法表的第一个因子
+    for (let i = 1; i <= 9; i++) {
+        // 初始化存放每一行结果的变量
+        let text = '';
+
+        // 内层循环，控制乘法表的第二个因子
+        for (let j = 1; j <= 9; j++) {
+            // 将 i 和 j 转换为两位数的字符串
+            let tmpI = i.toString().padStart(2, "0");
+            let tmpJ = j.toString().padStart(2, "0");
+
+            // 计算乘积，并将结果转换为两位数的字符串
+            let tmpResult = (i * j).toString().padStart(2, "0");
+
+            // 构建每一项的文本，包括样式和分隔符
+            text += `${tmpI} * ${tmpJ} = <span class="text-danger">${tmpResult}</span> | `;
+        }
+
+        // 输出每一行的文本
+        console.log(text);
+
+        // 将每一行的文本添加到结果变量中，换行
+        resultText += `${text} <br>`;
+    }
+
+    // 输出最终结果文本
+    console.log('resultText', resultText);
+
+    // 将结果文本设置到显示容器中
+    box.innerHTML = resultText;
+</script>
+</body>
+
+</html>
