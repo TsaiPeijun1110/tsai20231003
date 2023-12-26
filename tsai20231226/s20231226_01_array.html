@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+  <script>
+    //array 使用isArray 判斷是否為純陣列
+    //如果是 才可以使用array method
+    let strArr = ['amy','bmb','cat']; //創建一個包含字串的陣列
+    console.log('strArr',strArr); //輸出整個陣列到控制台
+    console.log('strArr typeof',typeof (strArr)); //輸出陣列的資料型態到控制台
+    let result = Array.isArray(strArr); //使用 Array.isArray 檢查變數是否為陣列
+    console.log('result',result); //輸出檢查結果到控制台
+
+
+
+    strArr.forEach(function (value, index, array){ //通常array可省略 使用 forEach 方法遍歷陣列，傳入匿名函式作為回調
+        console.log('index',index); // 輸出當前元素的索引到控制台
+        console.log('value',value); // 輸出當前元素的值到控制台
+        console.log('array',array); // 輸出整個陣列到控制台，通常 array 可省略
+    })
+
+
+
+    //object
+    let myobj = {  // 定義包含字串的物件，每個屬性有唯一的鍵值
+        's1' : 'amy',
+        's2' : 'bmb',
+        's3' : 'cat'
+    }
+    console.log('myobj',myobj); // 輸出整個物件到控制台
+    console.log('myobj typeof',typeof (myobj)); // 輸出物件的資料型態到控制台
+    let resultobj = Array.isArray(yobj);
+    console.log('resultobj ?',resultobj);
+
+
+    //object 無法使用array metod
+    // 因為物件不是陣列，無法使用 forEach 方法
+    // 若要遍歷物件的屬性，可以使用 for...in 迴圈
+    myobj.forEach(function (value, index, array){
+        console.log('index',index);
+        console.log('value',value);
+        console.log('array',array);
+    })
+  </script>
+</body>
+
+</html>
