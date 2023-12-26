@@ -20,20 +20,27 @@
     let newData = [];
 
     // > 4 使用data.filter方式
-    newData = data.filter((value,key)=> {
-      return value > 4 ;
-    });
-    console.log('newData',newData);
+    // newData = data.filter((value,key)=> {
+    //   return value > 4 ;
+    // });
+    // console.log('newData',newData);
 
 
     // > 5 使用forEach方式
-    data.forEach(value => {
-      if(value >5) {
-        console.log('value',value);
-        newData.push(value);
-      }
+    // data.forEach(value => {
+    //   if(value >5) {
+    //     console.log('value',value);
+    //     newData.push(value);
+    //   }
+    // });
+    // console.log('newData',newData);
+    
+    
+    //find 找第一個
+    let first = data.find(value => {
+      return value > 6 ;
     });
-    console.log('newData',newData);
+    console.log('first',first);
   </script>
 </body>
 
