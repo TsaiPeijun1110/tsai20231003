@@ -14,35 +14,26 @@
 
 <body>
 
-  <script>   //1.加總
-     let data = [1,2,3,4,5,6,7,8,9,10 ];
+  <script>
+    //薪水*2
+    let data = [3,5,5,6,3,5,10];
 
-    // let sum = 0;
-    // data.forEach(value => {
-    //     sum += value;
-    // }) 
-    //     console.log('sum', sum);
-  
+    //我的方法
+    // let newData = data.map(function (value) {
+    //     return value * 2 ;
+    // })
+    // console.log('newData',newData);
 
-    // //2.基數加總
-    // let sum = 0;
-    // data.forEach(value => {
-    //     if(value % 2 == 1) {
-    //         console.log('value',value);
-    //         sum += value;
-    //     }
-    // });
-    // console.log('sum',sum);
 
-    //3.偶數加總
-    let sum = 0;
+    //使用 arr push 方法
+    let newData = [];
+
     data.forEach(value => {
-        if(value % 3 == 0) {
-            console.log('value',value);
-            sum += value;
-        }
-    });
-    console.log('sum',sum);
+        console.log('value',value);
+        let tmpValue = value * 2 ; //設一個臨時變數名稱[tmpValue],後面放要做的事情 
+        newData.push(tmpValue); //把原本的名稱加上data並把臨時變數名稱放進去
+    })
+    console.log('newData',newData);
 
 
 
