@@ -31,11 +31,24 @@
     data.forEach(value => {
         console.log('value',value);
         let tmpValue = value * 2 ; //設一個臨時變數名稱[tmpValue],後面放要做的事情 
-        newData.push(tmpValue); //把原本的名稱加上data並把臨時變數名稱放進去
+        newData.push(tmpValue); //把原本陣列名稱加上data並把臨時變數名稱放進去
+                                //使用.push 方法將處理後的數據添加到 newData 陣列中
     })
     console.log('newData',newData);
 
 
+
+    //newMapData 使用map方式
+    //map() 对每个元素进行某种操作(例如:做乘法)
+    let newMapData = []; // 創建一個新的空陣列 newMapData
+    newMapData = data.map(function (value)  { // 使用 map 方法對每個元素進行映射處理
+       if (value > 5 ) { //如果元素的值大於 5
+        return value * 6; //乘以6
+       }else{
+        return value * 8 ; // 如果元素不大於 5，乘以 8
+       }
+    });
+    console.log('newMapData',newMapData);
 
   </script>
 </body>
