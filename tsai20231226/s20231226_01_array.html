@@ -34,25 +34,67 @@
 
 
     //object
-    let myobj = {  // 定義包含字串的物件，每個屬性有唯一的鍵值
+    let myObj = {  // 定義包含字串的物件，每個屬性有唯一的鍵值
         's1' : 'amy',
         's2' : 'bmb',
         's3' : 'cat'
     }
-    console.log('myobj',myobj); // 輸出整個物件到控制台
-    console.log('myobj typeof',typeof (myobj)); // 輸出物件的資料型態到控制台
-    let resultobj = Array.isArray(yobj);
+    console.log('myObj',myObj); // 輸出整個物件到控制台
+    console.log('myObj typeof',typeof (myObj)); // 輸出物件的資料型態到控制台
+    let resultobj = Array.isArray(myObj);
     console.log('resultobj ?',resultobj);
 
 
     //object 無法使用array metod
     // 因為物件不是陣列，無法使用 forEach 方法
     // 若要遍歷物件的屬性，可以使用 for...in 迴圈
-    myobj.forEach(function (value, index, array){
-        console.log('index',index);
-        console.log('value',value);
+    // myobj.forEach(function (value, index, array){
+    //     console.log('index',index);
+    //     console.log('value',value);
+    //     console.log('array',array);
+    // })
+
+    //查看object
+    // for in 
+    for (const key in myObj){
+        console.log('key',key);
+        console.log('${myObj[key]}', `${myObj[key]}`);
+    }
+
+
+    //for of use array 很少用
+
+    //object
+    //object 轉成 array
+    Object.keys(myObj).forEach(function (value, index, array){
+        console.log('index',index); // 輸出當前元素的索引到控制台
+        console.log('value',value); // 輸出當前元素的值到控制台
         console.log('array',array);
     })
+    let storeArr = [
+        {
+            'name' : '新北市',
+            'tel' : '0911-111-111',
+        },
+        {
+            'name' : '台中市',
+            'tel' : '0966-666-666',
+        },
+        {
+            'name' : '台南市',
+            'tel' : '0933-222-888'
+        }
+    ];
+    console.log('storeArr',storeArr);
+    storeArr.forEach(function (value, key){
+        console.log('key',key);
+        console.log('value',value);
+        console.log('value["name"]',value['name']);
+        console.log('value["tel"]',value['tel']);
+        if (value['name'] == '台北店') {
+            console.log('這是台北店');
+        }
+    });
   </script>
 </body>
 
