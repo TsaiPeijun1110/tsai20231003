@@ -46,7 +46,8 @@
         // 為每個元素添加 click 事件監聽器
         value.addEventListener('click', function() {
             console.log(`${getValue} is clicked`); // 輸出被點擊的元素的內容到控制台
-        }) 
+            console.log('this',this); //this指向value
+        })  
     });
 
     
