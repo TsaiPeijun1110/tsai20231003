@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="d-grid gap-2 p-2">
+                <button type="button"  class="btn btn-outline-warning myBtn">Warning</button>
+                                        <!-- class裡可以直接新增一組id名稱給他 -->
+            </div>
+           
+        </div>
+    </div>
+    <div class="col">
+        <div class="d-grid gap-2 p-2">
+            <button type="button"  class="btn btn-outline-success myBtn">Success</button>
+        </div>
+        
+    </div>
+</div>
+  <script> // 使用 document.querySelectorAll('.myBtn') 選取所有 class 為 'myBtn' 的元素
+    const myBtn = document.querySelectorAll('.myBtn');
+    console.log('myBtn',myBtn);
+    console.log('myBtn typeof', typeof (myBtn) );      // 輸出類型到控制台
+    console.log('myBtn isArray',Array.isArray(myBtn)); // 輸出是否為陣列到控制台
+
+    // querySelectorAll 返回的是 NodeList，雖然不是陣列但可以使用 forEach 方法
+    myBtn.forEach(function (value, key){
+        console.log('value',value);
+        console.log('key',key);
+        let getValue = value.innerText;  // 獲取元素的內容
+        console.log('getValue',getValue);
+
+        // 為每個元素添加 click 事件監聽器
+        value.addEventListener('click', function() {
+            console.log(`${getValue} is clicked`); // 輸出被點擊的元素的內容到控制台
+        }) 
+    });
+
+    
+  </script>
+</body>
+
+</html>
