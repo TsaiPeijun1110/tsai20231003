@@ -16,10 +16,10 @@
         height: 300px;
     }
     .bg-pink{
-        background-color: pink;
+        background-color: pink !important;
     }
     .bg-blue{
-        background-color: lightblue;
+        background-color: lightblue !important;
     }
 </style>
 </head>
@@ -27,6 +27,19 @@
 <body>
     <button type="button" id="myBtn">myBtn</button>
     <button type="button" id="myBtn2" onclick="myBtn2Fun(`thls`);">myBtn2</button>
+
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col">
+                <input type="text" name="" id="myInput" class="form-control">
+            </div>
+            <div class="col">
+                <input type="text" name="" id="myInput" class="form-control">
+            </div>
+        </div>
+    </div>
+
+
 
     <div class="contain">
         <div class="row">
@@ -45,6 +58,8 @@
         console.log('data',data);
     }
     const myBtn = document.getElementById('myBtn');
+    const box = document.getElementById('box');
+    const myInput = document.getElementById('myInput');
 
     //1.
     myBtn.addEventListener('click', function () {
@@ -69,7 +84,17 @@
         console.log('myBtn mouseout ok');
         this.setAttribute('class', 'bg-blue');
     });
+    
 
+    myInput.addEventListener('focus', function () {
+        console.log('myBtn focus');
+        this.setAttribute('class', 'form-control bg-pink');
+    });
+
+    myInput.addEventListener('blur', function () {
+        console.log('myBtn blur');
+        this.setAttribute('class', 'form-control');
+    });
   </script>
 </body>
 
