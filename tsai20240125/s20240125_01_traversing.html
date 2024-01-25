@@ -15,6 +15,9 @@
         width: 100%;
         height: 70vh;
     }
+    .container{
+        color:#ccc;
+    }
   </style>
 
 </head>
@@ -27,16 +30,22 @@
                     div
                     <ul class=" border border-success p-3">
                         ul
-                        <li class=" border border-warning p-3">
+                        <li class=" border border-warning p-3" data-name="li1">
                             li
-                        <span class=" border border-danger p-3">
-                            Hello
+                        <span class=" mySpan border border-danger p-3">
+                            Hello span1 class
                             </span>
                         </li>
-                        <li class=" border border-warning p-3 mt-3">
-                            li 
-                            <b class=" border border-danger p-3 ">
-                                hello a
+                        <li class=" border border-warning p-3 " data-name="li1">
+                            li
+                            <span class=" mySpan border border-danger p-3">
+                                Hello span2 class
+                                </span> 
+                            </li> 
+                            <li class=" border border-warning p-3 mt-3" data-name="li2">
+                                li
+                            <b id="myB" class=" border border-danger p-3">
+                                hello b
                             </b>
                         </li> 
                     </ul> 
@@ -51,8 +60,22 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <script>
-$(document).ready(function(){
+$(document).ready(function (){
+ const mySpan = $('.mySpan');
+ const myB = $('#myB');
 
+ mySpan.click(function (e) {
+    console.log('mySpan ok');
+    console.log(this,'this');
+    let nowElement = $(this).parent();
+    console.log('nowElement',nowElement);
+    let getClassText = nowElement.attr('class');
+    getClassText = getClassText + 'text-danger';
+    console.log('getClassText',getClassText);
+    nowElement.attr('class',getClassText);
+    $(this).addClass('text-primary')
+    //nowElement.attr('class','text-danger');
+ });
 });
    
 
