@@ -10,21 +10,19 @@
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-
 </head>
 
 <body>
     <div class="container-fluid">
         <div class="row mt-3">
             <div class="col">
-                <button id="sumBtn" type="button" class="btn btn-danger d-none" data-name="高跟鞋" data-price="500" data-img="21">
+                <button id="sumBtn" type="button" class="btn btn-danger d-none">
                     合計
                 </button>
-                <button  type="button" class="myBtn btn btn-info" data-name="高跟鞋" data-price="500" data-img="21">
+                <button type="button" class="myBtn btn btn-info" data-name="高跟鞋" data-price="500" data-img="21">
                     高跟鞋
                 </button>
-                <button type="button" class=" myBtn btn btn-warning" data-name="馬克杯" data-price="1000" data-img="30">
+                <button type="button" class="myBtn btn btn-warning" data-name="馬克杯" data-price="1000" data-img="30">
                     馬克杯
                 </button>
                 <button type="button" class="myBtn btn btn-success" data-name="筆電" data-price="2000" data-img="48">
@@ -34,7 +32,7 @@
         </div>
         <div class="row mt-3">
             <div class="col">
-                <button type="button" class="myBtn btn btn-success" data-name="遊戲把手" data-price="2500" data-img="96"  data-id="1">
+                <button type="button" class="myBtn btn btn-success" data-name="遊戲把手" data-price="2500" data-img="96" data-id="1">
                     遊戲把手
                 </button>
                 <button type="button" class="myBtn btn btn-info" data-name="車子" data-price="1500" data-img="111">
@@ -52,36 +50,12 @@
         <table class="table table-hover align-middle text-center">
             <thead>
                 <tr>
-                    <!-- <th width="7%">編號</th> -->
                     <th width="15%">品名</th>
-                    <!-- <th width="7%">數量</th>
-                    <th width="12%">小記</th> -->
                     <th width="30%">備註</th>
-                    <th width="" class="text=start">操作</th>
+                    <th width="" class="text-start">刪除</th>
                 </tr>
             </thead>
             <tbody>
-                <!-- <tr>
-                    <td>
-                        <img  src="https://picsum.photos/id/${imgUrl}/80/80"
-                            alt="">
-                        </td>
-                        <td class="text-start">
-                        ${name}
-                        <br>
-                        單價 <span>${price}</span>元
-                        <div class="mb-3">
-                            <label for="" class="form-label">數量</label>
-                            <input type="number" class="quantity form-control" id="" max="20" min="1" value="1">
-                            </div>
-                            <hr>
-                            小計: <span class="myTotal">${price}</span>
-                    </td>
-                    <td class="text-start">
-                        <button type="button" class="cloneBtn btn btn-warning">Clone</button>
-                        <button type="button" class="delBtn btn btn-warning">Del</button>
-                    </td>
-                </tr> -->
             </tbody>
         </table>
     </div>
@@ -105,86 +79,46 @@
             function sumFun() {
                 console.log('sumBtn ok');
                 let myTotal = $('.myTotal');
-                let getMyTotalCount = myTotal.length;
-                console.log('myTotal',myTotal);
                 let sum = 0;
-                    myTotal.each(function (index,value) {
-                        console.log('index',index);
-                        console.log('value',value);
-                        sum = sum + Number($(value).text());
-                    });
-                    console.log('final sum ',sum);
-                    $('.mySum').text(sum);
-                }
-            
+                myTotal.each(function (index, value) {
+                    console.log('index', index);
+                    console.log('value', value);
+                    sum = sum + Number($(value).text());
+                });
+                console.log('final sum ', sum);
+                $('#mySum').text(sum);
+            }
 
             function delFun(nowThis) {
                 console.log('del ok');
-                let nowTr = $(nowThis).parent().parent();
+                let nowTr = $(nowThis).closest('tr');
                 nowTr.remove();
                 sumFun();
-
-                // // 抓tr數量
-                // // 如果tr <=2 不能刪除
-
-                // // 抓tr數量
-                // let getTrCount = $('tr').length;
-                // console.log('getTrCount',getTrCount);
-                 //如果tr <=2 不能刪除
-                // if(getTrCount > 2) {
-                //      let nowTr = $(nowThis).parent().parent();
-                //      nowTr.remove();
-                //  }
-                
             }
 
             function cloneFun(nowThis) {
                 console.log('clone ok');
-                let nowTr = $(nowThis).parent().parent();
+                let nowTr = $(nowThis).closest('tr');
                 nowTr.clone(true).insertAfter(nowTr);
                 sumFun();
             }
 
-            const myBtn = $('.myBtn');
-            //const mySum = $('.mySum');
-            const sumBtn = $('.sumBtn');
-            let delBtn = $('.delBtn');
-            let cloneBtn = $('.cloneBtn');
-
-            sumBtn.click(function (e) {
-                sumFun();
-            });
-
-
-            cloneBtn.click(function (e) {
-                cloneFun(this);
-            });
-
-            delBtn.click(function (e) {
-                delFun(this);
-            });
-
-            myBtn.click(function (e) {
-                let name = $(this).attr('data-name');
-                let price = $(this).attr('data-price');
-                let imgUrl = $(this).attr('data-img');
-
+            function addProduct(name, price, imgUrl) {
                 let content = `
                 <tr>
                     <td>
-                        <img  src="https://picsum.photos/id/${imgUrl}/80/80"
-                            alt="">
-                        </td>
-                        <td class="text-start">
+                        <img  src="https://picsum.photos/id/${imgUrl}/80/80" alt="">
+                    </td>
+                    <td class="text-start">
                         ${name}
                         <br>
                         單價 <span>${price}</span>元
                         <div class="mb-3">
                             <label for="" class="form-label">數量</label>
                             <input type="number" class="quantity form-control" id="" max="20" min="1" value="1">
-                            </div>
-                            <hr>
-                            小計: <span class="myTotal">${price}</span>
+                        </div>
+                        <hr>
+                        小計: <span class="myTotal">${price}</span>
                     </td>
                     <td class="text-start">
                         <button type="button" class="cloneBtn btn btn-warning">Clone</button>
@@ -195,38 +129,42 @@
 
                 $('tbody').append(content);
 
-                addDelBtn = $('.delBtn').last();
-                addCloneBtn = $('.cloneBtn').last();
-                addQuantity = $('.quantity').last();
+                let myQuantity = $('.quantity').last();
 
-                sumFun();
-
-                addDelBtn.click(function (e) {
+                $('.delBtn').last().click(function (e) {
                     delFun(this);
                 });
 
-                addCloneBtn.click(function (e) {
+                $('.cloneBtn').last().click(function (e) {
                     cloneFun(this);
                 });
 
                 myQuantity.change(function (e) {
                     let getQuantity = Number($(this).val());
-                    let closestQuantityTr = $(this).parent().parent().parent();
+                    let closestQuantityTr = $(this).closest('tr');
                     let findTotal = closestQuantityTr.find('.myTotal');
-                    console.log('closestQuantityTr',closestQuantityTr);
-                    console.log('getQuantity',getQuantity);
+                    console.log('closestQuantityTr', closestQuantityTr);
+                    console.log('getQuantity', getQuantity);
                     let total = getQuantity * price;
-                    console.log('total',total);
+                    console.log('total', total);
                     findTotal.text(total);
 
                     sumFun();
                 });
+            }
+
+            const myBtn = $('.myBtn');
+
+            myBtn.click(function (e) {
+                let name = $(this).data('name');
+                let price = $(this).data('price');
+                let imgUrl = $(this).data('img');
+
+                addProduct(name, price, imgUrl);
+                sumFun();
             });
         });
-        
     </script>
-
-
 </body>
 
 </html>
