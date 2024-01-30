@@ -19,27 +19,39 @@
                 <button id="sumBtn" type="button" class="btn btn-danger d-none">
                     合計
                 </button>
-                <button type="button" class="myBtn btn btn-info" data-name="高跟鞋" data-price="500" data-img="21">
+                <button type="button" class="myBtn btn btn-outline-primary" data-name="高跟鞋" data-price="2000" data-img="21">
                     高跟鞋
                 </button>
-                <button type="button" class="myBtn btn btn-warning" data-name="馬克杯" data-price="1000" data-img="30">
+                <button type="button" class="myBtn btn btn-outline-secondary" data-name="馬克杯" data-price="1500" data-img="30">
                     馬克杯
                 </button>
-                <button type="button" class="myBtn btn btn-success" data-name="筆電" data-price="2000" data-img="48">
+                <button type="button" class="myBtn btn btn-outline-success" data-name="筆電" data-price="4650" data-img="48">
                     筆電
+                </button>
+                <button type="button" class="myBtn btn btn-outline-danger" data-name="手機" data-price="20000" data-img="160">
+                    手機
+                </button>
+                <button type="button" class="myBtn btn btn-outline-warning" data-name="船" data-price="40000" data-img="211">
+                    船
                 </button>
             </div>
         </div>
         <div class="row mt-3">
             <div class="col">
-                <button type="button" class="myBtn btn btn-success" data-name="遊戲把手" data-price="2500" data-img="96" data-id="1">
+                <button type="button" class="myBtn btn btn-outline-info" data-name="遊戲把手" data-price="2500" data-img="96" data-id="1">
                     遊戲把手
                 </button>
-                <button type="button" class="myBtn btn btn-info" data-name="車子" data-price="1500" data-img="111">
+                <button type="button" class="myBtn btn btn-outline-danger" data-name="車子" data-price="89000" data-img="133">
                     車子
                 </button>
-                <button type="button" class="myBtn btn btn-warning" data-name="相機" data-price="3000" data-img="250">
+                <button type="button" class="myBtn btn btn-outline-dark" data-name="相機" data-price="3760" data-img="250">
                     相機
+                </button>
+                <button type="button" class="myBtn btn btn-outline-warning" data-name="鬧鐘" data-price="3500" data-img="175">
+                    鬧鐘
+                </button>
+                <button type="button" class="myBtn btn  btn-outline-info" data-name="茶壺" data-price="8000" data-img="225">
+                    茶壺
                 </button>
             </div>
         </div>
@@ -51,8 +63,8 @@
             <thead>
                 <tr>
                     <th width="15%">品名</th>
-                    <th width="30%">備註</th>
-                    <th width="" class="text-start">刪除</th>
+                    <th width="30%">明細</th>
+                    <th width="" class="text-start">新增/刪除</th>
                 </tr>
             </thead>
             <tbody>
@@ -107,7 +119,7 @@
                 let content = `
                 <tr>
                     <td>
-                        <img  src="https://picsum.photos/id/${imgUrl}/80/80" alt="">
+                        <img  src="https://picsum.photos/id/${imgUrl}/230/200" alt="">
                     </td>
                     <td class="text-start">
                         ${name}
