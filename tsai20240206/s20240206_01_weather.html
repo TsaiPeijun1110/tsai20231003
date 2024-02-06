@@ -15,8 +15,20 @@
 </head>
 
 <body>
+    <ol id="my01">
+        <!-- <li>1</li> -->
+    </ol>
 
-
+    <table class="table table-hover" id="myTable">
+        <thead>
+            <tr>
+            <th width="30%" class="text-center">id</th>
+            <th class="text-start">name</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
     integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -27,6 +39,8 @@
   <script>
 $(document).ready(function(){
     let url = weatherUrl;
+    const my01 = $('#my01');
+    const myTable = $('#myTable');
 
     $.ajax({
         type: "get",
@@ -34,12 +48,33 @@ $(document).ready(function(){
         //data: "data",
         //dataType: "dataType",
         success: function (res) {
-            console.log('res',res);
+            // console.log('res',res);
+            // console.log('res.records',res.records);
+            // console.log('res["records"]',res["records"]);
+            // console.log('res.records.datasetDescription',res.records.datasetDescription); 
+            let nowLocation = res.records.location;
+            $.each(nowLocation, function (key, value) { 
+                //  console.log('key',key);
+                //  console.log('value',value);
+                let nowID = key + 1 ;
+                let stringID = nowID.toString().padStart(2, "0");
+                let nowLocationName = value.locationName;
+                // let content = `
+                //  <li>${nowLocationName}</li>
+                // `;
+                let content = `
+                    <tr>
+                        <td class="text-center">${stringID}</td>
+                        <td class="text-start">${nowLocationName}</td>
+                 </tr>
+                `;
+                 console.log('nowLocationName',nowLocationName);
+                $('tbody').append(content);
+            });
         }
     });
 });
    
-
   </script>
 
 
