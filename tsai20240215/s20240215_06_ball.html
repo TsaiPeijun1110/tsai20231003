@@ -43,12 +43,12 @@
         <div class="row">
             <div class="col">
                 <div class="box">
-                    <h4 class="mt-3">統計分數</h4>
+                    <h4 class="mt-3 ">統計分數</h4>
                     <h3 class="text-success mt-3">
                         歷史最高分數
                     </h3>
-                    <div class="text-primary mt-3">
-                        倒數計時
+                    <div class="text-info mt-3">
+                        <span id="timeSpan">倒數計時</span>
                     </div>
                     <hr>
                     <div class="text-danger mt-3">
@@ -64,20 +64,32 @@
             <div class="row">
                 <div class="col-6">
                     <div class="d-grid gap-2 mt-4">
-                        <button class="btn btn-primary " type="button" id="startBtn">開始</button>
-                        <button class="btn btn-primary" type="button" id="shontBtn">投籃</button>
+                        <button class="btn btn-info " type="button" id="startBtn">開始</button>
+                        <button class="btn btn-Warning" type="button" id="shontBtn">投籃</button>
+                        <button class="btn btn-danger" type="button" id="closeBtn">結束</button>
                     </div>
                 </div>
                 <div class=" col-6">
                     <div class="d-grid gap-2 mt-4">
-                        <button class="btn btn-primary" type="button" id="resetBtn">重置</button>
+                        <button class="btn btn-success" type="button" id="resetBtn">重置</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-
+    <div class="container" id="point3">
+        <div class="box box2">
+            <div class="row">
+                <div class="col">
+                    <img src="./img/3分球.jpg" alt="">
+                </div>
+                <div class="col">
+                    3分球時間.......
+                </div>
+            </div>
+        </div>
+    </div>
    
 
 
@@ -88,26 +100,44 @@
     <script>
         $(document).ready(function () {
             const scoreSpan = $('#scoreSpan');
+            const timeSpan = $('#timeSpan');
             const startBtn = $('#startBtn');
             const shontBtn = $('#shontBtn');
             const resetBtn = $('#resetBtn');
+            const closeBtn = $('#closeBtn');
             let score = 0;
+            let nowtime = 3;
             shontBtn.hide();
+            closeBtn.hide();
 
             startBtn.click(function (e) {
                 scoreSpan.text(score);
                 startBtn.hide();
                 shontBtn.show();
+
+                const myInterVal = setInterval(() => {
+                if(nowtime <= 0){
+                    clearInterval(myInterVal);
+                    shontBtn.hide();
+                    closeBtn.show();
+                    timeSpan.text('倒數計時');
+                }
+                timeSpan.text(nowtime);
+                    nowtime -= 1;
+                },1000);
             });
-            
+
             shontBtn.click(function (e) {
-                score += 3;
+                score += 2;
                 scoreSpan.text(score);
             });
 
             resetBtn.click(function (e) {
                 score = 0;
+                nowtime = 3;
                 scoreSpan.text(score);
+                startBtn.show();
+                closeBtn.hide();
             });
         });
 
