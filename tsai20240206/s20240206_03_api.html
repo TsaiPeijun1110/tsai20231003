@@ -9,9 +9,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/css/jquery.dataTables.min.css"
+    integrity="sha512-1k7mWiTNoyx2XtmI96o+hdjP8nn0f3Z2N4oF/9ZZRgijyV4omsKOXEnqL1gKQNPy2MTSP9rIEWGcH/CInulptA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" />
-
 </head>
 
 <body>
@@ -49,12 +50,13 @@
         success: function (res) {
           console.log('res', res);
           console.log('res.result', res.result);
-          console.log('res.result["records"]', res.result["records"]);
+          console.log('res.result["records"]', res.result['records']);
           console.log('res.result.records[0]', res.result.records[0]);
-          //let nowLocation = res.data;
+          
+          let nowLocation = res.result['records'];
           $.each(nowLocation, function (key, value) {
               console.log('key',key);
-              console.log('value[資料年月]',value['資料年月']);
+              console.log('value[月別:]',value["月別:"]);
             let nowID = key + 1;
             // let stringID = nowID.toString().padStart(2, "0");
             // let nowLocationType = value.locationType;
